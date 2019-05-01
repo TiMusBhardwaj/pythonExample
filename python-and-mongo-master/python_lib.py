@@ -1,3 +1,4 @@
+print("Importing python lib")
 def greeting(name):
   print("Hello, " + name)
 

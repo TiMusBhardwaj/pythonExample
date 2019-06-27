@@ -9,5 +9,5 @@ def myFun(arg1, arg2, arg3):
 args = ("Geeks", "for", "Geeks")
 myFun(*args)
 
-kwargs = {"arg1": "Geeks", "arg2": "for", "args": "Geeks"}
-myFun(**kwargs) 
+
+print(len("1"[1:]),"-------")

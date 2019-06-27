@@ -1,0 +1,43 @@
+# https://leetcode.com/problems/task-scheduler/
+
+
+class Solution:
+    def leastInterval(self, tasks, n: int) -> int:
+        arr = [0]*26
+        time = 0
+        intA = ord('A')
+        for ch in tasks:
+            arr[ord(ch)-intA] = arr[ord(ch)-intA] +1
+        arr = sorted(arr)
+        while arr[25]>0:
+            i = 0
+            if arr[25] ==0:
+                break
+            while i<=n:
+                if i<26 and arr[25-i] >0 :
+                    arr[25 - i] = arr[25-i] -1
+                elif arr[25] ==0:
+                    break
+                i +=1
+                time +=1
+            arr = sorted(arr)
+        return time
+
+
+    def leastInterval(self, tasks, n: int) -> int:
+        arr = [0]*26
+        time = 0
+        intA = ord('A')
+        for ch in tasks:
+            arr[ord(ch)-intA] = arr[ord(ch)-intA] +1
+        arr = sorted(arr)
+        slots = (arr[25]-1) *n
+        max_val = arr[25]-1
+        for c in arr[-2::-1]:
+            slots -= min(c, max_val)
+        return len(tasks) if slots<=0 else slots+len(tasks)
+
+
+if __name__ == '__main__':
+    res = Solution().leastInterval(['A','A','A','B','B','B'], 2)
+    print(res)

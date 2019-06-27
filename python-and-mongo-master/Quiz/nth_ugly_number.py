@@ -38,6 +38,8 @@ def getNthUglyNo(n):
 	# return ugly[n] value
 	return ugly[-1]
 
+
+
 def main():
 
 	n = 7
@@ -48,4 +50,6 @@ def main():
 if __name__ == '__main__':
 	main()
 
+
 #This code is contributed by Neelam Yadav
+

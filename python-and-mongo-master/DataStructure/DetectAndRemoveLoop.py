@@ -33,8 +33,8 @@ class LinkedList:
         return 0
 
     # Function to remove loop
-    # loop node-> Pointer to one of the loop nodes
-    # head --> Pointer to the start node of the
+    # loop node. Pointer to one of the loop nodes
+    # head -. Pointer to the start node of the
     # linked list
     def removeLoop(self, loop_node):
 

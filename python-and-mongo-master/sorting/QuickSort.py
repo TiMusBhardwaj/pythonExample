@@ -48,9 +48,9 @@ def partition2(arr, low, high):
     return i
 
 # The main function that implements QuickSort
-# arr[] --> Array to be sorted,
-# low --> Starting index,
-# high --> Ending index
+# arr[] -. Array to be sorted,
+# low -. Starting index,
+# high -. Ending index
 
 # Function to do Quick sort
 def quickSort(arr, low, high):
